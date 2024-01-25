@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda', cursive;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+#main #firstPage{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+#firstPage #top {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%,0);
+   color: aliceblue;
+}
+#top h5{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+#firstPage #name {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: aliceblue;
+
+}
+#name #textClr{
+    color: #14cf93;
+}
+.reveal .parent{
+    text-align: center;
+    display: block;
+    width: 100%;
+    overflow-y: hidden;
+}
+.reveal .parent .child{
+    display: block;
+}
+.child span{
+    display: inline-block;
+}
+#main #green{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    background-color: #14cf93;
+}
+#main #frontpage{
+    position: absolute;
+    width: 100%;
+    height:0;
+    bottom: 0;
+    background-color: aliceblue;
+}
+
