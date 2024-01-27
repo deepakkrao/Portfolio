@@ -45,10 +45,12 @@ tl
 })
 
 .to("#home",{
-    height:"100%",
+    height:"180vh",
     duration:2,
+    top:0,
     delay:-1.4,
-    ease:Expo.easeInOut
+    ease:Expo.easeInOut,
+    //oncompelete:function(){top:"0"}
 })
 }
 loaderAnimation();
@@ -63,7 +65,27 @@ tl1
 })
 .to("#heading2",{
     y:"0",
-    duration:1,
+    duration:2,
     delay:0.1,
     ease:Expo.easeInOut
 })
+function setZero(k)
+{
+  return k>10?k:"0"+k;
+}
+function set2Time()
+{
+    // for date object
+    const localTime= new Date();
+    // find the exact time from date object
+    const h = setZero(localTime.getHours());
+    const m = setZero(localTime.getMinutes());
+    const s = setZero(localTime.getSeconds());
+    console.log(h);
+    console.log(m);
+    console.log(s);
+    document.querySelector("#p2").innerHTML=
+    `<h5>My local Time ${h}:${m}:${s}<br>GMT(+5:30)</h5>`;
+    setTimeout(set2Time,1000);
+}
+set2Time();

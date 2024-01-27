@@ -12,6 +12,7 @@ html,body{
     position: relative;
     height: 100%;
     width: 100%;
+    /* overflow: hidden; */
 }
 #main #firstPage{
     position: relative;
@@ -68,6 +69,8 @@ html,body{
     height:0;
     bottom: 0;
     background-color: aliceblue;
+    overflow: hidden;
+    background-attachment: fixed;
 }
 
 #home nav{
@@ -78,8 +81,9 @@ html,body{
     width: 100%;
 }
 nav a{
-    text-decoration: none;
     text-transform: uppercase;
+    text-decoration: none;
+    color: black;
     font-size: 14px;
 }
 nav a .line{
@@ -97,40 +101,141 @@ background-color: #14cf93;
     position: absolute;
     /* display: flex; */
     width: 100%;
-    top: 50%;
-    left: 50%;
+    top: 20%;
     overflow: hidden;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%); */
     /* background-color: aqua; */
 }
-#heading #heading1,#heading2
+#heading #heading1
 {
     display: flex;
     justify-content: space-around;
     transform: translateY(100%);
     overflow: hidden; 
 }
-
+#heading #heading2{
+    display: flex;
+    margin-left: 5vw;
+    gap: 10vw;
+    /* justify-content: space-around; */
+    transform: translateY(100%);
+    overflow: hidden; 
+}
+#heading2 #icon{
+    position: relative;
+    height: 7vh;
+    width: 3.5vw;
+    margin-top: 10vh;
+    border-radius: 50%;
+    opacity: 20%;
+    background-color: black;    
+}
+#icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #14cf93;
+    font-size: 1.5em;
+}
 #heading1 h1{
     font-size: 5em;
+    opacity: 80%;
 }
 #heading1 #p1,#p2{
 text-transform: uppercase;
 font-size: .8em;
+opacity: 70%;
 
 }
 #heading #heading2{
     position: relative;
-    width: 80%;
+    width: 100%;
     /* background-color: blueviolet; */
 }
 #heading2 h1{
-    font-size: 5em;     
+    font-size: 5em; 
+    opacity: 80%;    
 }
 #heading2 #front{
-   border-bottom: 0.3em solid black;
+   padding: 0.5em;
+   font-family: 'Salsa', cursive;
    color: #14cf93;
-   /* transform: translateX(-50%); */
+}
+
+#home #images {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 45%;
+    width: 100%;
+    margin-top: 8vh;
+    height: 65vh;
+}
+
+
+#images #imglef {
+    position: absolute;
+    top:30%;
+    left: 10%;
+    width: 30%;
+    font-size: 0.8em;
+    opacity: 80%;
+}
+
+
+#imglef span{
+    color: #14cf93;
+    font-family: 'Merienda', cursive;
+}
+#imgri .img{
+   position: absolute;
+    width: 25vw;
+    height: 75vh;
+    border-radius: 1em;
+    filter: grayscale();
+    transition: filter 0.3s ease;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+#imgri .img:hover{
+    filter: grayscale(0);
+}
+#imgri .img:nth-child(1)
+{
+    transform: rotate(-10deg);
+    background-image: url(https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position:center;
+    background-size: cover;
+    top: 0%;
+}
+
+#imgri .img:nth-child(2)
+{
+    transform: rotate(-5deg);
+    background-image: url(https://images.unsplash.com/photo-1521898284481-a5ec348cb555?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position:center;
+    background-size: cover;
+    top: 10%;
+    right: 17%;
+}
+#imgri .img:nth-child(3)
+{
+    transform: rotate(-2deg);
+    background-image: url(https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position:center;
+    background-size: cover;
+    top:20%;
+    right: 9%;
+}
+
+body::-webkit-scrollbar{
+    width: 5px;
+    height: px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #14cf93;
+    border-radius: 1em;
 }
 
 
